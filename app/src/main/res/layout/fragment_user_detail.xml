@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sv_detail_user_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.detail.detailForUser.UserDetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="24dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="24dp">
+
+        <TextView
+            android:id="@+id/tv_detail_user_title_overview"
+            style="@style/TextAppearance.MdcTypographyStyles.Body2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Overview"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_detail_user_overview"
+            style="@style/TextAppearance.MdcTypographyStyles.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lorem"
+            app:layout_constraintStart_toStartOf="@id/tv_detail_user_title_overview"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_user_title_overview" />
+
+        <View
+            android:id="@+id/v_detail_user_line_top"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/marginTop"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_user_overview" />
+
+        <TextView
+            android:id="@+id/tv_detail_user_pelaksanaan"
+            style="@style/TextAppearance.MdcTypographyStyles.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginTop"
+            android:text="Pelaksanaan"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_detail_user_line_top" />
+
+        <TextView
+            android:id="@+id/tv_detail_user_tanggal"
+            style="@style/TextAppearance.MdcTypographyStyles.Body2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginItem"
+            android:drawableStart="@drawable/ic_calendar"
+            android:drawablePadding="8dp"
+            android:text="Makassar, 10 Februari 1999"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_detail_user_pelaksanaan"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_user_pelaksanaan" />
+
+        <TextView
+            android:id="@+id/tv_detail_user_tempat"
+            style="@style/TextAppearance.MdcTypographyStyles.Body2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="@dimen/marginItem"
+            android:drawableStart="@drawable/ic_gedung"
+            android:drawablePadding="12dp"
+            android:text="Lt.4 Rektorat, UIN Alauddin Makassar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_detail_user_tanggal"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_user_tanggal" />
+
+        <TextView
+            android:id="@+id/tv_detail_user_jalan"
+            style="@style/TextAppearance.MdcTypographyStyles.Body2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="@dimen/marginItem"
+            android:drawableStart="@drawable/ic_mappin"
+            android:drawablePadding="12dp"
+            android:text="Jln. Sungai Tangka No 70"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_user_tempat" />
+
+        <TextView
+            android:id="@+id/tv_detail_user_waktu"
+            style="@style/TextAppearance.MdcTypographyStyles.Body2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginItem"
+            android:drawableStart="@drawable/ic_clock"
+            android:drawablePadding="8dp"
+            android:text="12:00-02:PM"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_user_jalan" />
+
+        <View
+            android:id="@+id/v_detail_user_line_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/marginTop"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_user_waktu" />
+
+        <TextView
+            android:id="@+id/tv_detail_user_peserta"
+            style="@style/TextAppearance.MdcTypographyStyles.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginTop"
+            android:text="Peserta"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_detail_user_line_middle" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_detail_user_peserta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_user_peserta"
+            tools:itemCount="5"
+            tools:listitem="@layout/rv_list_peserta_layout" />
+
+        <View
+            android:id="@+id/v_detail_user_line_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/marginTop"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_detail_user_peserta" />
+
+        <TextView
+            android:id="@+id/tv_detail_user_title_berkas"
+            style="@style/TextAppearance.MdcTypographyStyles.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginTop"
+            android:text="Berkas"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_detail_user_line_bottom" />
+
+        <TextView
+            android:id="@+id/tv_detail_user_berkas"
+            style="@style/TextAppearance.MdcTypographyStyles.Body2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_attach"
+            android:drawablePadding="8dp"
+            android:text="@string/lorem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_user_title_berkas" />
+
+        <Button
+            android:id="@+id/btn_detail_user_kehadiran"
+            style="@style/ButtonCustom"
+            android:layout_width="216dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="41dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/check"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_user_berkas" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

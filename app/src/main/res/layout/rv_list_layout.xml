@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingStart="@dimen/marginStart"
+    android:paddingEnd="@dimen/marginEnd"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.github.florent37.shapeofview.shapes.RoundRectView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shape_roundRect_bottomRightRadius="@dimen/radiusRecyclerView"
+        app:shape_roundRect_bottomLeftRadius="@dimen/radiusRecyclerView"
+        app:shape_roundRect_topLeftRadius="@dimen/radiusRecyclerView"
+        app:shape_roundRect_topRightRadius="@dimen/radiusRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <ImageView
+                android:src="@drawable/office"
+                android:id="@+id/iv_list_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/tv_list_title"
+                style="@style/TextAppearance.MdcTypographyStyles.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStart"
+                android:layout_marginTop="@dimen/marginTop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Rapat UMPTKIN" />
+
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/tv_list_location"
+                style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTop"
+                android:layout_marginEnd="@dimen/marginEnd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Lt. 4 Rektorat" />
+
+            <view
+                android:id="@+id/v_list_line"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/marginTop"
+                android:background="@color/colorAccent"
+                app:layout_constraintEnd_toEndOf="@id/tv_list_location"
+                app:layout_constraintStart_toStartOf="@id/tv_list_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_list_title" />
+
+            <TextView
+                android:id="@+id/tv_list_time"
+                style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@id/tv_list_title"
+                app:layout_constraintTop_toBottomOf="@id/v_list_line"
+                tools:text="12:00-02:00 PM" />
+
+            <TextView
+                style="@style/TextAppearance.MdcTypographyStyles.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/tv_list_time"
+                app:layout_constraintTop_toBottomOf="@id/tv_list_time"
+                tools:text="15 April 2020" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

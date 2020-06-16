@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/constraint_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_nav_header_drawer"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/marginStart"
+            android:layout_marginTop="@dimen/marginTop"
+            android:src="@android:color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_nav_header_nama"
+            style="@style/TextAppearance.MdcTypographyStyles.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/civ_nav_header_drawer"
+            app:layout_constraintTop_toTopOf="@id/civ_nav_header_drawer"
+            tools:text="Ali Asgar Zainal Abidin" />
+
+        <TextView
+            android:id="@+id/tv_nav_header_email"
+            style="@style/TextAppearance.MdcTypographyStyles.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/civ_nav_header_drawer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_nav_header_nama"
+            tools:text="asgarali929@gmail.com" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_nav_header_subtitletop"
+        style="@style/TextAppearance.MdcTypographyStyles.Caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart"
+        android:layout_marginTop="@dimen/marginTop"
+        android:layout_marginEnd="@dimen/marginEnd"
+        android:text="@string/subtitle_top_nav_view"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint_header_container" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_nav_header_eventdibuat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/tv_nav_header_subtitletop"
+        app:layout_constraintTop_toBottomOf="@id/tv_nav_header_subtitletop"
+        tools:itemCount="3"
+        tools:listitem="@layout/nav_view_item_drawer" />
+
+    <TextView
+        android:id="@+id/tv_nav_header_subtitlebot"
+        style="@style/TextAppearance.MdcTypographyStyles.Caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart"
+        android:layout_marginTop="@dimen/marginTop"
+        android:layout_marginEnd="@dimen/marginEnd"
+        android:text="@string/subtitle_bot_nav_view"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_nav_header_eventdibuat" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_nav_header_eventdiikuti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/tv_nav_header_subtitletop"
+        app:layout_constraintTop_toBottomOf="@id/tv_nav_header_subtitlebot"
+        tools:itemCount="3"
+        tools:listitem="@layout/nav_view_item_drawer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

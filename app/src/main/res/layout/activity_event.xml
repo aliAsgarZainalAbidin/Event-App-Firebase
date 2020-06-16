@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context=".ui.event.EventActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_event_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_event_layout"
+            style="@style/ToolbarCustom"
+            android:layout_width="match_parent"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:navigationIcon="@drawable/ic_back_nav"
+            app:title="Create Event" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="24dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="24dp">
+
+            <TextView
+                android:id="@+id/tv_event_title"
+                style="@style/TextAppearance.MdcTypographyStyles.Subtitle2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/title"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_event_title"
+                style="@style/TextInput.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_event_title" />
+
+            <TextView
+                android:id="@+id/tv_event_overview"
+                style="@style/TextAppearance.MdcTypographyStyles.Subtitle2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/overview"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_event_title" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_event_overview"
+                style="@style/TextInput.EditText.Area"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:paddingTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_event_overview" />
+
+            <TextView
+                android:id="@+id/tv_event_ruangan"
+                style="@style/TextAppearance.MdcTypographyStyles.Subtitle2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/ruangan"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_event_overview" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_event_ruangan"
+                style="@style/TextInput.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_event_ruangan" />
+
+            <TextView
+                android:id="@+id/tv_event_alamat"
+                style="@style/TextAppearance.MdcTypographyStyles.Subtitle2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/alamat"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_event_ruangan" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_event_alamat"
+                style="@style/TextInput.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_event_alamat" />
+
+            <TextView
+                android:id="@+id/tv_event_maps"
+                style="@style/TextAppearance.MdcTypographyStyles.Subtitle2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/maps"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_event_alamat" />
+
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_event_maps" />
+
+            <TextView
+                android:id="@+id/tv_event_waktu"
+                style="@style/TextAppearance.MdcTypographyStyles.Subtitle2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/waktu"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/map" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_event_waktu_awal"
+                style="@style/ButtonCustom.Outlined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="9:00"
+                app:layout_constraintEnd_toStartOf="@id/tv_event_waktu_batas"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_event_waktu" />
+
+            <TextView
+                android:id="@+id/tv_event_waktu_batas"
+                style="@style/TextAppearance.MdcTypographyStyles.Subtitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/s_d"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/btn_event_waktu_awal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btn_event_waktu_akhir"
+                app:layout_constraintStart_toEndOf="@id/btn_event_waktu_awal"
+                app:layout_constraintTop_toTopOf="@id/btn_event_waktu_awal" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_event_waktu_akhir"
+                style="@style/ButtonCustom.Outlined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="10:00"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_event_waktu_batas"
+                app:layout_constraintTop_toBottomOf="@id/tv_event_waktu" />
+
+            <TextView
+                android:id="@+id/tv_event_tanggal"
+                style="@style/TextAppearance.MdcTypographyStyles.Subtitle2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/tanggal"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_event_waktu_awal" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_event_tanggal_awal"
+                style="@style/ButtonCustom.Outlined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_event_tanggal" />
+
+            <TextView
+                android:id="@+id/tv_event_peserta"
+                style="@style/TextAppearance.MdcTypographyStyles.Subtitle2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/peserta"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_event_tanggal_awal" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_event_peserta"
+                style="@style/TextInput.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_event_peserta" />
+
+            <ImageButton
+                android:id="@+id/ib_event_add_peserta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorAccent"
+                android:elevation="4dp"
+                android:src="@drawable/ic_mdi_add_green"
+                app:layout_constraintEnd_toEndOf="@id/et_event_peserta"
+                app:layout_constraintStart_toStartOf="@id/et_event_peserta"
+                app:layout_constraintTop_toBottomOf="@id/et_event_peserta" />
+
+            <TextView
+                android:id="@+id/tv_event_berkas"
+                style="@style/TextAppearance.MdcTypographyStyles.Subtitle2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/berkas"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ib_event_add_peserta" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_event_berkas"
+                style="@style/TextInput.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_mdi_add_green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_event_berkas" />
+
+            <Button
+                android:id="@+id/btn_event_create"
+                style="@style/ButtonCustom"
+                android:layout_width="216dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:text="@string/buat"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_event_berkas" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

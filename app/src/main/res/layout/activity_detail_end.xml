@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.DetailActivity">
+
+    <ImageView
+        android:id="@+id/iv_detail_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/laptop"
+        app:layout_constraintBottom_toBottomOf="@id/constraint_detail_toolbar_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ib_detail_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="@dimen/marginStart"
+        android:layout_marginTop="@dimen/marginTop"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_back_nav"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_detail_toolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_toolbar"
+        android:paddingStart="@dimen/marginStart"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_detail_toolbar_title"
+            style="@style/TextAppearance.MdcTypographyStyles.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rapat UMPTKIN"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_detail_toolbar_location"
+            style="@style/TextAppearance.MdcTypographyStyles.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lt. 4 Rektorat"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tv_detail_toolbar_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_toolbar_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/sv_detail_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint_detail_toolbar_container">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="24dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="24dp">
+
+            <TextView
+                android:id="@+id/tv_detail_title_overview"
+                style="@style/TextAppearance.MdcTypographyStyles.Body2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Overview"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_detail_overview"
+                style="@style/TextAppearance.MdcTypographyStyles.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lorem"
+                app:layout_constraintStart_toStartOf="@id/tv_detail_title_overview"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_title_overview" />
+
+            <View
+                android:id="@+id/v_detail_line_top"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/marginTop"
+                android:background="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_overview" />
+
+            <TextView
+                android:id="@+id/tv_detail_pelaksanaan"
+                style="@style/TextAppearance.MdcTypographyStyles.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTop"
+                android:text="Pelaksanaan"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v_detail_line_top" />
+
+            <TextView
+                android:id="@+id/tv_detail_tanggal"
+                style="@style/TextAppearance.MdcTypographyStyles.Body2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_calendar"
+                android:drawablePadding="8dp"
+                android:text="Makassar, 10 Februari 1999"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_detail_pelaksanaan"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_pelaksanaan" />
+
+            <TextView
+                android:id="@+id/tv_detail_tempat"
+                style="@style/TextAppearance.MdcTypographyStyles.Body2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:drawableStart="@drawable/ic_gedung"
+                android:drawablePadding="12dp"
+                android:text="Lt.4 Rektorat, UIN Alauddin Makassar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_detail_tanggal"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_tanggal" />
+
+            <TextView
+                android:id="@+id/tv_detail_jalan"
+                style="@style/TextAppearance.MdcTypographyStyles.Body2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:drawableStart="@drawable/ic_mappin"
+                android:drawablePadding="12dp"
+                android:text="Jln. Sungai Tangka No 70"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_tempat" />
+
+            <TextView
+                android:id="@+id/tv_detail_waktu"
+                style="@style/TextAppearance.MdcTypographyStyles.Body2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_clock"
+                android:drawablePadding="8dp"
+                android:text="12:00-02:PM"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_jalan" />
+
+            <View
+                android:id="@+id/v_detail_line_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/marginTop"
+                android:background="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_waktu" />
+
+            <TextView
+                android:id="@+id/tv_detail_peserta"
+                style="@style/TextAppearance.MdcTypographyStyles.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTop"
+                android:text="Pelaksanaan"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v_detail_line_middle" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_detail_peserta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_peserta"
+                tools:itemCount="5"
+                tools:listitem="@layout/rv_list_peserta_layout" />
+
+            <View
+                android:id="@+id/v_detail_line_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/marginTop"
+                android:background="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_detail_peserta" />
+
+            <TextView
+                android:id="@+id/tv_detail_title_berkas"
+                style="@style/TextAppearance.MdcTypographyStyles.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTop"
+                android:text="Berkas"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v_detail_line_bottom" />
+
+            <TextView
+                android:id="@+id/tv_detail_berkas"
+                style="@style/TextAppearance.MdcTypographyStyles.Body2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_attach"
+                android:drawablePadding="8dp"
+                android:text="@string/lorem"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_title_berkas" />
+
+
+            <Button
+                android:id="@+id/btn_detail_kehadiran"
+                style="@style/ButtonCustom"
+                android:layout_width="216dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="41dp"
+                android:layout_marginBottom="24dp"
+                android:text="@string/login"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_berkas" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
