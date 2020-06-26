@@ -46,4 +46,5 @@
     <string name="error_message">Silahkan Isi</string>
     <string name="success_message">Data berhasil disimpan</string>
     <string name="failed_message">Data gagal disimpan</string>
+    <string name="gedung">Gedung</string>
 </resources>

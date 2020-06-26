@@ -171,7 +171,7 @@
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_attach"
             android:drawablePadding="8dp"
-            android:text="@string/lorem"
+            android:text="Tidak ada berkas"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_detail_creator_title_berkas" />

@@ -51,6 +51,7 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation "androidx.coordinatorlayout:coordinatorlayout:1.1.0"
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
 
     //Firebase Auth
     implementation 'com.google.firebase:firebase-auth:19.3.1'
@@ -64,9 +65,14 @@ dependencies {
 
     //QR Scanner
     implementation 'me.dm7.barcodescanner:zxing:1.9'
+    implementation 'com.google.zxing:core:3.3.3'
+    implementation 'com.journeyapps:zxing-android-embedded:3.2.0@aar'
 
     // Google MAPS
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
+
+    //Place Picker
+    implementation 'com.google.android.libraries.places:places:2.3.0'
 
     // Auto Complete Place & location
     implementation 'com.google.android.gms:play-services-places:17.0.0'
@@ -78,4 +84,6 @@ dependencies {
     //AsyncHttpClient
     implementation 'com.loopj.android:android-async-http:1.4.9'
 
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
 }

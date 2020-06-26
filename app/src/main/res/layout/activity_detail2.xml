@@ -27,13 +27,14 @@
                 app:layout_collapseParallaxMultiplier="0.5" />
 
             <androidx.appcompat.widget.Toolbar
+                app:menu="@menu/menu_detail"
                 android:id="@+id/toolbar_detail"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
                 app:navigationIcon="@drawable/ic_back_nav"
                 app:title="@string/app_name"
-                app:titleTextColor="@color/colorAccent" />
+                app:titleTextColor="@color/colorAccent"/>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
